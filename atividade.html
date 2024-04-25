@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript Atividade</title>
+</head>
+<body>
+    <button onclick="showAlert()">Clique Aqui</button>
+    <button onclick="showNotification()">Mostrar Notificação</button>
+    <button onclick="promptAndAlert()">Prompt e Alert</button>
+    <button onclick="manipulateNumber()">Manipular Número</button>
+    <button onclick="calculateSumAndProduct()">Soma e Produto</button>
+    <button onclick="calculateAverage()">Média das Notas</button>
+    <button onclick="performCalculations()">Cálculos Matemáticos</button>
+    <button onclick="countClicks()">Contador de Cliques</button>
+    <div id="output"></div>
+
+    <script>
+       
+        function showAlert() {
+            alert("Olá, Mundo!");
+        }
+
+        
+        function showNotification() {
+            document.getElementById("output").innerHTML = "Botão clicado!";
+        }
+
+        
+        function promptAndAlert() {
+            var userInput = prompt("Digite algo:");
+            alert("Você digitou: " + userInput);
+        }
+
+        
+        function manipulateNumber() {
+            var num = prompt("Digite um número:");
+            num = parseInt(num);
+            var result = num * 2;
+            alert("O dobro do número é: " + result);
+        }
+
+        
+        function calculateSumAndProduct() {
+            var num1 = parseInt(prompt("Digite o primeiro número:"));
+            var num2 = parseInt(prompt("Digite o segundo número:"));
+            var sum = num1 + num2;
+            var product = num1 * num2;
+            alert("A soma dos números é: " + sum + "\nO produto dos números é: " + product);
+        }
+
+        
+        function calculateAverage() {
+            var grade1 = parseFloat(prompt("Digite a primeira nota:"));
+            var grade2 = parseFloat(prompt("Digite a segunda nota:"));
+            var grade3 = parseFloat(prompt("Digite a terceira nota:"));
+            var average = (grade1 + grade2 + grade3) / 3;
+            alert("A média das notas é: " + average.toFixed(2));
+        }
+
+      
+        function performCalculations() {
+            var num = parseInt(prompt("Digite um número:"));
+            var squareRoot = Math.sqrt(num);
+            var cubeRoot = Math.cbrt(num);
+            var squared = Math.pow(num, 2);
+            var cubed = Math.pow(num, 3);
+            alert("Raiz Quadrada: " + squareRoot + "\nRaiz Cúbica: " + cubeRoot + "\nPotência ao Quadrado: " + squared + "\nPotência ao Cubo: " + cubed);
+        }
+
+        var clickCount = 0;
+        function countClicks() {
+            clickCount++;
+            alert("Número de cliques: " + clickCount);
+        }
+    </script>
+</body>
+</html>
